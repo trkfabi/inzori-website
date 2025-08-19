@@ -1,9 +1,11 @@
 import React from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 import logoInzori from "../../assets/images/logo_inzori.png";
 
 const FooterSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const { translations } = useLanguage();
 
   return (
     <section
@@ -20,9 +22,7 @@ const FooterSection: React.FC = () => {
             <div className="footer-column">
               <h3 className="footer-title">inzori</h3>
               <p className="footer-description">
-                Building innovative solutions since 2013. We specialize in
-                full-stack development, AI integration, and creating scalable
-                digital products.
+                {translations.footer.description}
               </p>
               <div className="footer-logo">
                 <div className="footer-logo-icon">
@@ -85,8 +85,7 @@ const FooterSection: React.FC = () => {
             <div className="footer-divider"></div>
             <div className="footer-bottom-content">
               <p className="copyright">
-                © 2024 Inzori. All rights reserved. Building the future, one
-                line of code at a time.
+                © 2024 Inzori. {translations.footer.rights}
               </p>
               <div className="footer-legal">
                 <span>Privacy Policy</span>

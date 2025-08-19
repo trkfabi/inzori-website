@@ -1,10 +1,12 @@
 import React from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 import contactImage from "../../assets/images/home/contact_image.jpg";
 import logoInzori from "../../assets/images/logo_inzori.png";
 
 const ContactUsSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const { translations } = useLanguage();
 
   return (
     <section
@@ -27,10 +29,14 @@ const ContactUsSection: React.FC = () => {
           <div className="contact-left">
             <div className="contact-info">
               {/* Main Title */}
-              <h2 className="contact-main-title">Let's work together!</h2>
+              <h2 className="contact-main-title">
+                {translations.contact.title}
+              </h2>
 
               {/* Subtitle */}
-              <h3 className="contact-subtitle">Contact Us</h3>
+              <h3 className="contact-subtitle">
+                {translations.contact.subtitle}
+              </h3>
 
               {/* Inzori Logo */}
               <div className="contact-logo">

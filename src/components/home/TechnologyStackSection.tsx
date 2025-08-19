@@ -1,9 +1,11 @@
 import React from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 import techImage from "../../assets/images/home/tech_image.jpg";
 
 const TechnologyStackSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const { translations } = useLanguage();
 
   return (
     <section
@@ -22,16 +24,11 @@ const TechnologyStackSection: React.FC = () => {
       <div className="container-90">
         <div className="tech-stack-content">
           {/* Title */}
-          <h2 className="section-title">Our Technology Stack</h2>
+          <h2 className="section-title">{translations.techStack.title}</h2>
 
           {/* Introductory Paragraph */}
           <div className="tech-intro">
-            <p>
-              We deliver scalable backends, intuitive frontends, and seamless
-              mobile apps. Using modern frameworks like Node.js, React, and
-              React Native, we build reliable, future-ready solutions tailored
-              to your business.
-            </p>
+            <p>{translations.techStack.description}</p>
           </div>
 
           {/* Technology Categories */}

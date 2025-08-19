@@ -1,9 +1,13 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useLanguage } from "../../contexts/LanguageContext";
+import LanguageSelector from "./LanguageSelector";
+import "../../styles/components/NavbarStyles.css";
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { translations } = useLanguage();
 
   const handleNavigation = (path: string) => {
     if (path === "/#contact") {
@@ -49,7 +53,7 @@ const Navbar: React.FC = () => {
             }`}
             onClick={() => handleNavigation("/")}
           >
-            Home
+            {translations.nav.home}
           </button>
           <button
             className={`navbar-link ${
@@ -57,14 +61,15 @@ const Navbar: React.FC = () => {
             }`}
             onClick={() => handleNavigation("/portfolio")}
           >
-            Portfolio
+            {translations.nav.portfolio}
           </button>
           <button
             className="navbar-link"
             onClick={() => handleNavigation("/#contact")}
           >
-            Contact Us
+            {translations.nav.contactUs}
           </button>
+          <LanguageSelector />
         </div>
       </div>
     </nav>

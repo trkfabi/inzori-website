@@ -1,9 +1,11 @@
 import React from "react";
 import aboutUsImage from "../../assets/images/home/aboutus_image.jpg";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const AboutUsSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const { translations } = useLanguage();
 
   return (
     <section
@@ -22,25 +24,11 @@ const AboutUsSection: React.FC = () => {
       <div className="container-90">
         <div className="about-content">
           {/* Title */}
-          <h2 className="section-title">About us</h2>
+          <h2 className="section-title">{translations.aboutUs.title}</h2>
 
           {/* Text Content */}
           <div className="about-text">
-            <p>
-              Founded in 2013 by Martin Zabala and Fabian Martinez, Inzori is a
-              team of seasoned Senior Software Engineers with deep expertise
-              across the entire software development lifecycle—from initial
-              planning and architecture to deployment and ongoing maintenance.
-            </p>
-            <p>
-              We have successfully delivered tailored solutions in industries
-              such as Healthcare, Fintech, Automotive, e-commerce, Fleet
-              Management, and Social Applications.
-            </p>
-            <p>
-              With a commitment to exceptional quality and client satisfaction,
-              we consistently transform ideas into impactful digital products.
-            </p>
+            <p>{translations.aboutUs.description}</p>
           </div>
 
           {/* Timeline Diagram */}
@@ -49,7 +37,9 @@ const AboutUsSection: React.FC = () => {
               <div className="timeline-circle timeline-circle-small">
                 <span className="timeline-number">2013</span>
               </div>
-              <p className="timeline-label">Founded by Martin & Fabian</p>
+              <p className="timeline-label">
+                {translations.aboutUs.timeline.founded}
+              </p>
             </div>
 
             <div className="timeline-arrow">
@@ -83,9 +73,13 @@ const AboutUsSection: React.FC = () => {
 
             <div className="timeline-item">
               <div className="timeline-circle timeline-circle-large">
-                <span className="timeline-number">10+ years</span>
+                <span className="timeline-number">
+                  {translations.aboutUs.timeline.years}
+                </span>
               </div>
-              <p className="timeline-label">Experience Enterprise</p>
+              <p className="timeline-label">
+                {translations.aboutUs.timeline.experience}
+              </p>
             </div>
 
             <div className="timeline-arrow">
@@ -119,9 +113,13 @@ const AboutUsSection: React.FC = () => {
 
             <div className="timeline-item">
               <div className="timeline-circle timeline-circle-small">
-                <span className="timeline-number">Global clients</span>
+                <span className="timeline-number">
+                  {translations.aboutUs.timeline.global}
+                </span>
               </div>
-              <p className="timeline-label">USA & Europe Trusted Brands</p>
+              <p className="timeline-label">
+                {translations.aboutUs.timeline.trusted}
+              </p>
             </div>
           </div>
         </div>

@@ -1,10 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 import taglineImage from "../../assets/images/home/tagline_image.jpg";
 
 const TaglinePortfolioSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const { translations } = useLanguage();
   const navigate = useNavigate();
 
   const handlePortfolioClick = () => {
@@ -30,18 +32,15 @@ const TaglinePortfolioSection: React.FC = () => {
         <div className="tagline-portfolio-content">
           {/* Main Tagline */}
           <div className="main-tagline">
-            <p className="tagline-subtitle">
-              Remote-first. AI-powered. Human-driven.
-            </p>
-            <p className="tagline-subtitle">
-              We build products that grow with your business.
-            </p>
-            <p className="tagline-subtitle">Your vision, built to scale.</p>
+            {/* <h2 className="tagline-title">{translations.tagline.title}</h2> */}
+            <p className="tagline-subtitle">{translations.tagline.subtitle1}</p>
+            <p className="tagline-subtitle">{translations.tagline.subtitle2}</p>
+            <p className="tagline-subtitle">{translations.tagline.subtitle3}</p>
           </div>
 
           {/* Portfolio Button */}
           <button className="portfolio-button" onClick={handlePortfolioClick}>
-            PORTFOLIO
+            {translations.tagline.portfolioButton}
           </button>
         </div>
       </div>

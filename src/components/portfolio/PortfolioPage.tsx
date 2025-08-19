@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 import cEye1 from "../../assets/images/portfolio/c-eye-1.jpeg";
 import cEye2 from "../../assets/images/portfolio/c-eye-2.jpeg";
 import ft1 from "../../assets/images/portfolio/ft-1.jpeg";
@@ -42,6 +43,7 @@ import brip2 from "../../assets/images/portfolio/brip-2.jpeg";
 
 const PortfolioPage: React.FC = () => {
   const navigate = useNavigate();
+  const { translations } = useLanguage();
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -59,16 +61,14 @@ const PortfolioPage: React.FC = () => {
       <section className="portfolio-header-section">
         <div className="container-90">
           <div className="portfolio-header-content">
-            <h1 className="portfolio-main-title">Portfolio</h1>
+            <h1 className="portfolio-main-title">
+              {translations.portfolio.title}
+            </h1>
             <p className="portfolio-description">
-              Our portfolio showcases a diverse range of user-friendly
-              applications across various industries, from healthcare and
-              finance to travel and entertainment. Each project demonstrates our
-              commitment to innovative design and development, delivering
-              solutions that exceed expectations and drive real business value.
+              {translations.portfolio.subtitle}
             </p>
             <button className="back-to-home-btn" onClick={handleBackToHome}>
-              BACK TO HOME
+              {translations.portfolio.backToHome}
             </button>
           </div>
         </div>
@@ -76,10 +76,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* C Eye Section */}
       <PortfolioProjectSection
-        title="C Eye"
-        description="An innovative mobile application for comprehensive eye health
-          monitoring, tracking, personalized recommendations, and connecting
-          with eye care professionals."
+        title={translations.portfolio.projects.cEye.title}
+        description={translations.portfolio.projects.cEye.description}
         imageCount={2}
         imageDescriptions={[
           "C Eye App - Smartphone Interface",
@@ -90,10 +88,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* Facetouch - Photo Studio Section */}
       <PortfolioProjectSection
-        title="Facetouch - Photo Studio"
-        description="A powerful photo editing and studio management application for
-          photographers, offering tools for image enhancement, retouching,
-          and organization."
+        title={translations.portfolio.projects.facetouch.title}
+        description={translations.portfolio.projects.facetouch.description}
         imageCount={2}
         imageDescriptions={[
           "Facetouch - Smartphone App",
@@ -104,10 +100,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* Kingbee-Vans Section */}
       <PortfolioProjectSection
-        title="Kingbee-Vans"
-        description="A mobile application for simplifying commercial van rental and
-          management, featuring real-time availability, secure payments, and
-          vehicle details."
+        title={translations.portfolio.projects.kingbeeVans.title}
+        description={translations.portfolio.projects.kingbeeVans.description}
         imageCount={5}
         imageDescriptions={[
           "Map Interface",
@@ -122,10 +116,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* Fluid Truck Section */}
       <PortfolioProjectSection
-        title="Fluid Truck"
-        description="An on-demand truck and van rental platform for businesses and
-          individuals, offering a convenient solution for moving goods and
-          managing logistics."
+        title={translations.portfolio.projects.fluidTruck.title}
+        description={translations.portfolio.projects.fluidTruck.description}
         imageCount={5}
         imageDescriptions={[
           "Map Interface",
@@ -140,21 +132,18 @@ const PortfolioPage: React.FC = () => {
 
       {/* My Canopy Health Section */}
       <PortfolioProjectSection
-        title="My Canopy Health"
-        description="A comprehensive digital health platform for personal well-being,
-          offering health insights, fitness tracking, appointment
-          management, and connections to healthcare providers."
+        title={translations.portfolio.projects.myCanopyHealth.title}
+        description={translations.portfolio.projects.myCanopyHealth.description}
         imageCount={2}
         imageDescriptions={["Login/Signup Screen", "Home Training Screen"]}
         images={[mch1, mch2]}
+        imageClass="low-res"
       />
 
       {/* De Lage Landen (DLL Group) Section */}
       <PortfolioProjectSection
-        title="De Lage Landen (DLL Group)"
-        description="A global financial solutions provider's application for managing
-          financial agreements, tracking assets, and accessing critical
-          financial data."
+        title={translations.portfolio.projects.dllGroup.title}
+        description={translations.portfolio.projects.dllGroup.description}
         imageCount={4}
         imageDescriptions={[
           "Desktop Spreadsheet",
@@ -168,10 +157,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* Akimbo Card Section */}
       <PortfolioProjectSection
-        title="Akimbo Card"
-        description="A versatile mobile payment application for managing finances,
-          sending money, and making secure transactions, with features like
-          spending tracking and real-time notifications."
+        title={translations.portfolio.projects.akimboCard.title}
+        description={translations.portfolio.projects.akimboCard.description}
         imageCount={2}
         imageDescriptions={[
           "Akimbo App - Person Holding",
@@ -182,10 +169,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* Vibrant Economy Section */}
       <PortfolioProjectSection
-        title="Vibrant Economy"
-        description="A platform connecting local businesses with consumers to foster
-          economic growth and community engagement, allowing discovery of
-          local services and events."
+        title={translations.portfolio.projects.vibrantEconomy.title}
+        description={translations.portfolio.projects.vibrantEconomy.description}
         imageCount={2}
         imageDescriptions={[
           "Smartphone over Desk",
@@ -196,10 +181,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* CFO Insights Section */}
       <PortfolioProjectSection
-        title="CFO Insights"
-        description="An analytics and reporting tool for financial professionals,
-          providing real-time data, dashboards, and insights for strategic
-          decision-making."
+        title={translations.portfolio.projects.cfoInsights.title}
+        description={translations.portfolio.projects.cfoInsights.description}
         imageCount={2}
         imageDescriptions={["Outdoor Charts Display", "Data with Green Header"]}
         images={[cfo1, cfo2]}
@@ -207,10 +190,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* HSBC Cycling Hub Section */}
       <PortfolioProjectSection
-        title="HSBC Cycling Hub"
-        description="A dedicated application for cycling enthusiasts, offering routes,
-          event information, training plans, and community forums,
-          integrating with fitness trackers."
+        title={translations.portfolio.projects.hsbcCycling.title}
+        description={translations.portfolio.projects.hsbcCycling.description}
         imageCount={2}
         imageDescriptions={[
           "Smartphone near Bicycle",
@@ -221,10 +202,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* Loog Academy Section */}
       <PortfolioProjectSection
-        title="Loog Academy"
-        description="An interactive educational application designed to teach children
-          how to play the guitar, featuring engaging lessons and a playful
-          interface."
+        title={translations.portfolio.projects.loogAcademy.title}
+        description={translations.portfolio.projects.loogAcademy.description}
         imageCount={2}
         imageDescriptions={[
           "Tablet with Cartoon Characters",
@@ -235,10 +214,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* Good Done Great Section */}
       <PortfolioProjectSection
-        title="Good Done Great"
-        description="A corporate social responsibility platform that helps companies
-          manage philanthropic initiatives and employee giving programs,
-          streamlining donations and volunteering."
+        title={translations.portfolio.projects.goodDoneGreat.title}
+        description={translations.portfolio.projects.goodDoneGreat.description}
         imageCount={2}
         imageDescriptions={[
           "Smartphone over Desk",
@@ -249,10 +226,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* FaceQuiz - Celebrity Trivia Section */}
       <PortfolioProjectSection
-        title="FaceQuiz - Celebrity Trivia"
-        description="An entertaining mobile game challenging users to identify
-          celebrities, featuring a vast database, multiple game modes, and
-          leaderboards."
+        title={translations.portfolio.projects.faceQuiz.title}
+        description={translations.portfolio.projects.faceQuiz.description}
         imageCount={2}
         imageDescriptions={[
           "White Smartphone with Celebrity",
@@ -263,10 +238,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* Brippo - Help Desk Software Section */}
       <PortfolioProjectSection
-        title="Brippo - Help Desk Software"
-        description="A comprehensive help desk software solution for streamlining
-          customer support, managing tickets, and tracking service
-          performance."
+        title={translations.portfolio.projects.brippo.title}
+        description={translations.portfolio.projects.brippo.description}
         imageCount={2}
         imageDescriptions={["Laptop on Wooden Table", "Help Desk Dashboard"]}
         images={[brip1, brip2]}
@@ -274,10 +247,8 @@ const PortfolioPage: React.FC = () => {
 
       {/* The Loop Closet Section */}
       <PortfolioProjectSection
-        title="The Loop Closet"
-        description="A fashion rental and resale platform promoting sustainable
-          fashion, allowing users to rent designer clothing, buy pre-owned
-          items, and sell garments."
+        title={translations.portfolio.projects.loopCloset.title}
+        description={translations.portfolio.projects.loopCloset.description}
         imageCount={2}
         imageDescriptions={["E-commerce Grid Layout", "Product Detail Page"]}
         images={[tlc1, tlc2]}
@@ -294,6 +265,7 @@ interface PortfolioProjectSectionProps {
   imageDescriptions: string[];
   layout?: string;
   images?: string[]; // Added images prop
+  imageClass?: string; // Added image class for specific styling
 }
 
 const PortfolioProjectSection: React.FC<PortfolioProjectSectionProps> = ({
@@ -303,6 +275,7 @@ const PortfolioProjectSection: React.FC<PortfolioProjectSectionProps> = ({
   imageDescriptions,
   layout = "",
   images, // Destructure images prop
+  imageClass = "", // Destructure image class prop
 }) => {
   const { elementRef, isVisible } = useIntersectionObserver();
 
@@ -320,12 +293,12 @@ const PortfolioProjectSection: React.FC<PortfolioProjectSectionProps> = ({
           <div className={`project-images ${layout}`}>
             {images
               ? images.map((imageUrl, index) => (
-                  <div key={index} className="project-image">
+                  <div key={index} className={`project-image ${imageClass}`}>
                     <img src={imageUrl} alt={imageDescriptions[index]} />
                   </div>
                 ))
               : imageDescriptions.map((desc, index) => (
-                  <div key={index} className="project-image">
+                  <div key={index} className={`project-image ${imageClass}`}>
                     <div className="image-placeholder">{desc}</div>
                   </div>
                 ))}

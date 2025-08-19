@@ -1,8 +1,10 @@
 import React from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const ClientTestimonialsSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const { translations } = useLanguage();
 
   return (
     <section
@@ -14,7 +16,7 @@ const ClientTestimonialsSection: React.FC = () => {
       <div className="container-90">
         <div className="testimonials-content">
           {/* Title */}
-          <h2 className="section-title">Client Testimonials</h2>
+          <h2 className="section-title">{translations.testimonials.title}</h2>
 
           {/* Testimonials Grid - 4 in a row */}
           <div className="testimonials-grid">
@@ -29,13 +31,10 @@ const ClientTestimonialsSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <h3 className="client-name">Nick Evans</h3>
-              <p className="client-title">Product Manager, Fluid Truck</p>
+              <h3 className="client-name">{translations.testimonials.nickEvans.name}</h3>
+              <p className="client-title">{translations.testimonials.nickEvans.title}</p>
               <blockquote className="testimonial-quote">
-                As a Product Manager at Fluid Truck, I had the pleasure of
-                collaborating with Inzori for many years. They are highly
-                talented engineers with a constant drive to learn new skills and
-                embrace new challenges.
+                {translations.testimonials.nickEvans.quote}
               </blockquote>
             </div>
 
@@ -50,12 +49,10 @@ const ClientTestimonialsSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <h3 className="client-name">Eric Engberson</h3>
-              <p className="client-title">VP of Product, Verinext</p>
+              <h3 className="client-name">{translations.testimonials.ericEngberson.name}</h3>
+              <p className="client-title">{translations.testimonials.ericEngberson.title}</p>
               <blockquote className="testimonial-quote">
-                People like Inzori are hard to find: fast learners, loyal,
-                always delivering on their word, reliable across any timezone,
-                and diplomatic in difficult situations.
+                {translations.testimonials.ericEngberson.quote}
               </blockquote>
             </div>
 

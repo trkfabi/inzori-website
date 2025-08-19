@@ -1,9 +1,11 @@
 import React from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 import trustedImage from "../../assets/images/home/trusted_image.jpg";
 
 const TrustedByGlobalClientsSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const { translations } = useLanguage();
 
   return (
     <section
@@ -22,16 +24,11 @@ const TrustedByGlobalClientsSection: React.FC = () => {
       <div className="container-90">
         <div className="trusted-clients-content">
           {/* Title */}
-          <h2 className="section-title">Trusted by Global Clients</h2>
+          <h2 className="section-title">{translations.trustedBy.title}</h2>
 
           {/* Introductory Paragraph */}
           <div className="trusted-intro">
-            <p>
-              We believe in building long-term relationships based on trust,
-              collaboration, and shared success. Many of our clients have been
-              with us for years, growing together as we help them bring new
-              ideas to life.
-            </p>
+            <p>{translations.trustedBy.description}</p>
           </div>
 
           {/* Clients List - Two Columns */}

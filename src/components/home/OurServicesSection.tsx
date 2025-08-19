@@ -1,11 +1,13 @@
 import React from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 import fullstackImage from "../../assets/images/home/services_fullstack_image.jpg";
 import aiImage from "../../assets/images/home/services_ai_image.jpg";
 import fintechImage from "../../assets/images/home/services_fintech_image.jpg";
 
 const OurServicesSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const { translations } = useLanguage();
 
   return (
     <section
@@ -18,17 +20,10 @@ const OurServicesSection: React.FC = () => {
         <div className="our-services-content">
           {/* Header Section */}
           <div className="services-header">
-            <h2 className="section-title">Our Services</h2>
+            <h2 className="section-title">{translations.services.title}</h2>
             <div className="services-intro">
-              <p>
-                At Inzori, we go beyond writing code—we build complete digital
-                ecosystems.
-              </p>
-              <p>
-                Our team designs and develops scalable SaaS platforms, from
-                backend architecture to intuitive mobile and frontend
-                applications.
-              </p>
+              <p>{translations.services.intro.ecosystems}</p>
+              <p>{translations.services.intro.platforms}</p>
             </div>
           </div>
 
@@ -43,11 +38,11 @@ const OurServicesSection: React.FC = () => {
                   className="service-image-real"
                 />
               </div>
-              <h3 className="service-title">Fullstack Solutions</h3>
+              <h3 className="service-title">
+                {translations.services.fullstack.title}
+              </h3>
               <p className="service-description">
-                We specialize in robust backend systems, modern web frontends,
-                and cross-platform mobile apps that integrate seamlessly into
-                complex business environments.
+                {translations.services.fullstack.description}
               </p>
             </div>
 
@@ -60,11 +55,11 @@ const OurServicesSection: React.FC = () => {
                   className="service-image-real"
                 />
               </div>
-              <h3 className="service-title">AI-powered</h3>
+              <h3 className="service-title">
+                {translations.services.ai.title}
+              </h3>
               <p className="service-description">
-                Artificial Intelligence is not just a feature for us—it's part
-                of our daily workflow. Productivity, Optimization,
-                Decision-making, Fast delivering.
+                {translations.services.ai.description}
               </p>
             </div>
 
@@ -77,11 +72,11 @@ const OurServicesSection: React.FC = () => {
                   className="service-image-real"
                 />
               </div>
-              <h3 className="service-title">e-commerce & FinTech</h3>
+              <h3 className="service-title">
+                {translations.services.fintech.title}
+              </h3>
               <p className="service-description">
-                Payment Gateways integration, e-commerce custom plugins
-                development, IT security. We ensure that every solution is
-                scalable, secure, and future-ready.
+                {translations.services.fintech.description}
               </p>
             </div>
           </div>

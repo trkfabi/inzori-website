@@ -1,9 +1,11 @@
 import React from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 import whyChooseImage from "../../assets/images/home/why_choose_image.jpg";
 
 const WhyChooseInzoriSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const { translations } = useLanguage();
 
   return (
     <section
@@ -22,7 +24,7 @@ const WhyChooseInzoriSection: React.FC = () => {
       <div className="container-90">
         <div className="why-choose-content">
           {/* Title */}
-          <h2 className="section-title">Why Choose Inzori</h2>
+          <h2 className="section-title">{translations.whyChoose.title}</h2>
 
           {/* Reasons Grid */}
           <div className="reasons-grid">
@@ -36,9 +38,11 @@ const WhyChooseInzoriSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <h3 className="reason-title">Remote-First</h3>
+              <h3 className="reason-title">
+                {translations.whyChoose.remoteFirst.title}
+              </h3>
               <p className="reason-description">
-                Remote-first DNA with global team collaboration.
+                {translations.whyChoose.remoteFirst.description}
               </p>
             </div>
 
@@ -72,9 +76,11 @@ const WhyChooseInzoriSection: React.FC = () => {
                   <circle cx="12" cy="12" r="1.5" fill="currentColor" />
                 </svg>
               </div>
-              <h3 className="reason-title">Partnership</h3>
+              <h3 className="reason-title">
+                {translations.whyChoose.partnership.title}
+              </h3>
               <p className="reason-description">
-                Strong focus on quality, innovation and long-term partnerships.
+                {translations.whyChoose.partnership.description}
               </p>
             </div>
 
@@ -89,9 +95,11 @@ const WhyChooseInzoriSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <h3 className="reason-title">Experience</h3>
+              <h3 className="reason-title">
+                {translations.whyChoose.experience.title}
+              </h3>
               <p className="reason-description">
-                10+ years of experience delivering end-to-end solutions.
+                {translations.whyChoose.experience.description}
               </p>
             </div>
 
@@ -105,10 +113,11 @@ const WhyChooseInzoriSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <h3 className="reason-title">Industry XP</h3>
+              <h3 className="reason-title">
+                {translations.whyChoose.industryXp.title}
+              </h3>
               <p className="reason-description">
-                Expertise across healthcare, fintech, retail, automotive, and
-                more.
+                {translations.whyChoose.industryXp.description}
               </p>
             </div>
 
@@ -122,10 +131,11 @@ const WhyChooseInzoriSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <h3 className="reason-title">Integration</h3>
+              <h3 className="reason-title">
+                {translations.whyChoose.integration.title}
+              </h3>
               <p className="reason-description">
-                Proven ability to integrate payments, AI, cloud, and mobile
-                ecosystems.
+                {translations.whyChoose.integration.description}
               </p>
             </div>
 
@@ -139,9 +149,11 @@ const WhyChooseInzoriSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <h3 className="reason-title">Innovation</h3>
+              <h3 className="reason-title">
+                {translations.whyChoose.innovation.title}
+              </h3>
               <p className="reason-description">
-                Cutting-edge technology and creative problem-solving.
+                {translations.whyChoose.innovation.description}
               </p>
             </div>
           </div>

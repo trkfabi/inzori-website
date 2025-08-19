@@ -1,11 +1,13 @@
 import React from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 import aiSmartImage from "../../assets/images/home/ai_smart_image.jpg";
 import aiTestImage from "../../assets/images/home/ai_test_image.jpg";
 import aiProcessImage from "../../assets/images/home/ai_process_image.jpg";
 
 const AIIntegrationSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const { translations } = useLanguage();
 
   return (
     <section
@@ -18,15 +20,11 @@ const AIIntegrationSection: React.FC = () => {
         <div className="ai-integration-content">
           {/* Header Section */}
           <div className="ai-header">
-            <h2 className="section-title">AI Integration</h2>
+            <h2 className="section-title">
+              {translations.aiIntegration.title}
+            </h2>
             <div className="ai-intro">
-              <p>
-                At Inzori, we integrate AI into our daily workflows to
-                accelerate development, improve quality, and optimize processes.
-                By combining our technical expertise with the latest AI tools,
-                we deliver smarter solutions that help our clients innovate
-                faster and operate more efficiently.
-              </p>
+              <p>{translations.aiIntegration.intro}</p>
             </div>
           </div>
 
@@ -41,10 +39,11 @@ const AIIntegrationSection: React.FC = () => {
                   className="ai-service-image-real"
                 />
               </div>
-              <h3 className="ai-service-title">Smarter Development</h3>
+              <h3 className="ai-service-title">
+                {translations.aiIntegration.smart.title}
+              </h3>
               <p className="ai-service-description">
-                AI-assisted coding and architecture design deliver high-quality
-                solutions faster and reduce human error.
+                {translations.aiIntegration.smart.description}
               </p>
             </div>
 
@@ -57,10 +56,11 @@ const AIIntegrationSection: React.FC = () => {
                   className="ai-service-image-real"
                 />
               </div>
-              <h3 className="ai-service-title">Efficient QA & Testing</h3>
+              <h3 className="ai-service-title">
+                {translations.aiIntegration.testing.title}
+              </h3>
               <p className="ai-service-description">
-                Automated test generation and bug detection powered by AI
-                improve reliability and shorten release cycles.
+                {translations.aiIntegration.testing.description}
               </p>
             </div>
 
@@ -73,10 +73,11 @@ const AIIntegrationSection: React.FC = () => {
                   className="ai-service-image-real"
                 />
               </div>
-              <h3 className="ai-service-title">Process Optimization</h3>
+              <h3 className="ai-service-title">
+                {translations.aiIntegration.process.title}
+              </h3>
               <p className="ai-service-description">
-                From documentation to project management, AI streamlines
-                workflows, saving time and enabling greater focus on innovation.
+                {translations.aiIntegration.process.description}
               </p>
             </div>
           </div>
