@@ -12,6 +12,7 @@ import WhyChooseInzoriSection from "./components/WhyChooseInzoriSection";
 import TrustedByGlobalClientsSection from "./components/TrustedByGlobalClientsSection";
 import ClientTestimonialsSection from "./components/ClientTestimonialsSection";
 import ContactUsSection from "./components/ContactUsSection";
+import FooterSection from "./components/FooterSection";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <TrustedByGlobalClientsSection />
       <ClientTestimonialsSection />
       <ContactUsSection />
+      <FooterSection />
     </div>
   );
 }

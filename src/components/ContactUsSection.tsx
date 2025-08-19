@@ -1,6 +1,7 @@
 import React from "react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import contactImage from "../assets/images/contact_image.jpg";
+import logoInzori from "../assets/images/logo_inzori.png";
 
 const ContactUsSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
@@ -33,13 +34,11 @@ const ContactUsSection: React.FC = () => {
               {/* Inzori Logo */}
               <div className="contact-logo">
                 <div className="logo-icon">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="8" r="5" fill="currentColor" />
-                    <path
-                      d="M20 21c0-2.76-2.24-5-5-5H9c-2.76 0-5 2.24-5 5"
-                      fill="currentColor"
-                    />
-                  </svg>
+                  <img
+                    src={logoInzori}
+                    alt="Inzori Logo"
+                    className="contact-logo-image"
+                  />
                 </div>
                 <span className="logo-text">inzori</span>
               </div>
