@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/InzoriStyles.css";
+import HomeSection from "./components/HomeSection";
+import AboutUsSection from "./components/AboutUsSection";
+import RemoteFirstSection from "./components/RemoteFirstSection";
+import OurServicesSection from "./components/OurServicesSection";
+import TaglinePortfolioSection from "./components/TaglinePortfolioSection";
+import TechnologyStackSection from "./components/TechnologyStackSection";
+import AIIntegrationSection from "./components/AIIntegrationSection";
+import WhyChooseInzoriSection from "./components/WhyChooseInzoriSection";
+import TrustedByGlobalClientsSection from "./components/TrustedByGlobalClientsSection";
+import ClientTestimonialsSection from "./components/ClientTestimonialsSection";
+import ContactUsSection from "./components/ContactUsSection";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HomeSection />
+      <AboutUsSection />
+      <RemoteFirstSection />
+      <OurServicesSection />
+      <TaglinePortfolioSection />
+      <TechnologyStackSection />
+      <AIIntegrationSection />
+      <WhyChooseInzoriSection />
+      <TrustedByGlobalClientsSection />
+      <ClientTestimonialsSection />
+      <ContactUsSection />
     </div>
   );
 }

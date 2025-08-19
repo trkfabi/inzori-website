@@ -1,0 +1,2048 @@
+/* Inzori Website Custom Styles */
+
+/* Import Garet font locally */
+@font-face {
+  font-family: "Garet";
+  src: url("../assets/fonts/Garet-Book.otf") format("opentype"),
+    url("../assets/fonts/Garet-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Garet";
+  src: url("../assets/fonts/Garet-Heavy.otf") format("opentype"),
+    url("../assets/fonts/Garet-Heavy.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom CSS Variables - EXACT colors from Canva design */
+:root {
+  --inzori-orange: #bd522b;
+  --inzori-cream: #bdb194;
+  --inzori-dark: #0a0a0a;
+  --inzori-text-white: #ffffff;
+  --inzori-text-light: #f5f5f5;
+}
+
+/* Custom Container - 90% width */
+.container-90 {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Fade-in Animation for all sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Garet", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--inzori-text-white);
+  background-color: var(--inzori-dark);
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Garet", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.body-text {
+  font-size: 16px;
+  color: var(--inzori-text-white);
+  line-height: 1.6;
+}
+
+/* Section Styles */
+.section {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0;
+}
+
+/* Home Section Specific Styles */
+.home-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-content-left {
+  padding: 4rem 3rem;
+  height: 630px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.logo-icon {
+  width: 100px;
+  height: 100px;
+  margin-right: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-text-container {
+  flex: 1;
+}
+
+.logo-text {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--inzori-orange);
+  margin-bottom: 0.1rem;
+  line-height: 1;
+}
+
+.logo-subtitle {
+  font-size: 18px;
+  color: var(--inzori-cream);
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Hero Text */
+.hero-text {
+  font-size: 80px;
+  font-weight: 400;
+  color: var(--inzori-orange);
+  margin: 0;
+  line-height: 71px;
+  max-width: 600px;
+}
+
+/* Right Column - Image Container */
+.home-image-container {
+  height: 630px;
+  position: relative;
+  /*background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+}
+
+.home-background-image {
+  width: 100%;
+  height: calc(100% - 8rem);
+  object-fit: cover;
+  position: absolute;
+  top: 4rem;
+  left: 3rem;
+  right: 3rem;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Digital Overlay Elements */
+.digital-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.digital-line {
+  position: absolute;
+  background: #00ff88;
+  opacity: 0.8;
+  border-radius: 2px;
+}
+
+.line-1 {
+  width: 120px;
+  height: 2px;
+  top: 150px;
+  left: 50px;
+  transform: rotate(15deg);
+}
+
+.line-2 {
+  width: 80px;
+  height: 2px;
+  top: 200px;
+  right: 80px;
+  transform: rotate(-20deg);
+}
+
+.digital-icon {
+  position: absolute;
+  font-size: 20px;
+  color: #00ff88;
+  opacity: 0.9;
+}
+
+.icon-1 {
+  top: 120px;
+  left: 80px;
+}
+
+.icon-2 {
+  top: 180px;
+  right: 60px;
+}
+
+.digital-value {
+  position: absolute;
+  font-size: 14px;
+  color: #00ff88;
+  opacity: 0.8;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+.value-1 {
+  top: 100px;
+  right: 100px;
+}
+
+.value-2 {
+  top: 250px;
+  left: 70px;
+}
+
+.digital-plus {
+  position: absolute;
+  font-size: 18px;
+  color: #00ff88;
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+.plus-1 {
+  top: 140px;
+  left: 200px;
+}
+
+.plus-2 {
+  top: 220px;
+  right: 120px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .home-content-left {
+    padding: 2rem;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .home-image-container {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .logo-text {
+    font-size: 36px;
+  }
+
+  .hero-text {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content-left {
+    padding: 2rem 1.5rem;
+    min-height: 350px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .logo-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .logo-text {
+    font-size: 32px;
+  }
+
+  .hero-text {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .home-image-container {
+    height: 250px;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-content-left {
+    padding: 1.5rem 1rem;
+    min-height: 300px;
+  }
+
+  .logo-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .logo-text {
+    font-size: 28px;
+  }
+
+  .hero-text {
+    font-size: 28px;
+  }
+}
+
+/* About Us Section Styles */
+.about-us-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+  height: 768px;
+}
+
+.about-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 784px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text {
+  margin-bottom: 3rem;
+}
+
+.about-text p {
+  font-size: 20px;
+  color: var(--inzori-cream);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+/* About Us specific title styles */
+.about-us-section .section-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Timeline Diagram */
+.timeline-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.timeline-circle {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: var(--inzori-orange);
+}
+
+.timeline-circle-small {
+  width: 100px;
+  height: 100px;
+}
+
+.timeline-circle-large {
+  width: 130px;
+  height: 130px;
+}
+
+.timeline-number {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--inzori-text-white);
+  text-align: center;
+}
+
+.timeline-label {
+  font-size: 14px;
+  color: var(--inzori-cream);
+  margin: 0;
+  max-width: 120px;
+  line-height: 1.3;
+}
+
+.timeline-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-top: 60px;
+}
+
+.timeline-arrow svg {
+  display: block;
+  margin: 0;
+}
+
+/* Responsive Design for About Us */
+@media (max-width: 768px) {
+  .about-us-section {
+    height: auto;
+    min-height: 768px;
+  }
+
+  .about-content {
+    padding: 2rem 0;
+  }
+
+  .timeline-diagram {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .timeline-arrow {
+    transform: rotate(90deg);
+  }
+
+  .about-text p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-circle-small {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timeline-circle-large {
+    width: 100px;
+    height: 100px;
+  }
+
+  .timeline-number {
+    font-size: 16px;
+  }
+
+  .timeline-label {
+    font-size: 12px;
+    max-width: 100px;
+  }
+}
+
+/* Remote-First Approach Section Styles */
+.remote-first-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+  height: 768px;
+}
+
+.remote-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  z-index: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.remote-first-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 784px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.remote-first-text {
+  margin-bottom: 3rem;
+}
+
+.remote-first-text p {
+  font-size: 22px;
+  color: var(--inzori-cream);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+/* Key Points Section */
+.key-points-section {
+  text-align: left;
+  padding-left: 30px;
+}
+
+.key-points-heading {
+  font-size: 20px;
+  color: var(--inzori-cream);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.key-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.key-points-list li {
+  font-size: 22px;
+  color: var(--inzori-cream);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.key-points-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: var(--inzori-orange);
+  border-radius: 2px;
+}
+
+/* Remote-First specific title styles */
+.remote-first-section .section-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design for Remote-First */
+@media (max-width: 768px) {
+  .remote-first-section {
+    height: auto;
+    min-height: 768px;
+  }
+
+  .remote-first-content {
+    padding: 2rem 0;
+  }
+
+  .remote-first-text p {
+    text-align: center;
+  }
+
+  .key-points-section {
+    text-align: center;
+  }
+
+  .key-points-list li {
+    text-align: center;
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .key-points-list li::before {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .remote-first-text p {
+    font-size: 18px;
+  }
+
+  .key-points-list li {
+    font-size: 18px;
+  }
+
+  .key-points-heading {
+    font-size: 18px;
+  }
+}
+
+/* Our Services Section Styles */
+.our-services-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+  height: 970px;
+}
+
+.our-services-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Services Header */
+.services-header {
+  margin-bottom: 1rem;
+}
+
+.services-intro {
+  margin-bottom: 3rem;
+}
+
+.services-intro p {
+  font-size: 20px;
+  color: var(--inzori-cream);
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 300;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-image {
+  width: 326px;
+  height: 326px;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.service-image-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.15;
+}
+
+.service-title {
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.service-description {
+  font-size: 20px;
+  color: var(--inzori-cream);
+  line-height: 1.4;
+  font-weight: 300;
+  max-width: 280px;
+}
+
+/* Our Services specific title styles */
+.our-services-section .section-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design for Our Services */
+@media (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-services-section {
+    height: auto;
+    min-height: 768px;
+  }
+
+  .our-services-content {
+    padding: 2rem 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .service-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .service-title {
+    font-size: 32px;
+  }
+
+  .service-description {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .service-title {
+    font-size: 28px;
+  }
+
+  .service-description {
+    font-size: 18px;
+  }
+
+  .services-intro p {
+    font-size: 18px;
+  }
+}
+
+/* Tagline + Portfolio Button Section Styles */
+.tagline-portfolio-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+  height: 768px;
+}
+
+.tagline-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.tagline-portfolio-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Tagline */
+.main-tagline {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.tagline-text {
+  font-size: 64px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  max-width: 1000px;
+}
+
+.tagline-subtitle {
+  font-size: 38px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 1.3;
+  max-width: 1000px;
+}
+
+.tagline-description {
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 1.3;
+  max-width: 800px;
+}
+
+/* Portfolio Button */
+.portfolio-button-container {
+  margin-top: 2rem;
+}
+
+.portfolio-button {
+  background: transparent;
+  border: 2px solid var(--inzori-orange);
+  color: var(--inzori-orange);
+  padding: 1rem 2.5rem;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Garet", sans-serif;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.portfolio-button:hover {
+  background: var(--inzori-orange);
+  color: var(--inzori-dark);
+  transform: translateY(-2px);
+}
+
+.portfolio-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design for Tagline Portfolio */
+@media (max-width: 768px) {
+  .tagline-portfolio-section {
+    height: auto;
+    min-height: 768px;
+  }
+
+  .tagline-portfolio-content {
+    padding: 2rem 0;
+  }
+
+  .tagline-text {
+    font-size: 36px;
+  }
+
+  .tagline-subtitle {
+    font-size: 26px;
+  }
+
+  .tagline-description {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tagline-text {
+    font-size: 28px;
+  }
+
+  .tagline-subtitle {
+    font-size: 22px;
+  }
+
+  .tagline-description {
+    font-size: 18px;
+  }
+
+  .portfolio-button {
+    padding: 0.8rem 2rem;
+    font-size: 16px;
+  }
+}
+
+/* Technology Stack Section Styles */
+.technology-stack-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+  height: 768px;
+}
+
+.tech-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.tech-stack-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 784px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Tech Intro */
+.tech-intro {
+  margin-bottom: 3rem;
+}
+
+.tech-intro p {
+  font-size: 20px;
+  color: var(--inzori-cream);
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 300;
+}
+
+/* Technology Categories */
+.tech-categories {
+  text-align: left;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.tech-category {
+  font-size: 20px;
+  color: var(--inzori-cream);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.tech-category::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: var(--inzori-orange);
+  border-radius: 2px;
+}
+
+.tech-category-name {
+  font-weight: 600;
+  color: var(--inzori-cream);
+}
+
+/* Technology Stack specific title styles */
+.technology-stack-section .section-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design for Technology Stack */
+@media (max-width: 768px) {
+  .technology-stack-section {
+    height: auto;
+    min-height: 768px;
+  }
+
+  .tech-stack-content {
+    padding: 2rem 0;
+  }
+
+  .tech-intro p {
+    text-align: center;
+  }
+
+  .tech-categories {
+    text-align: center;
+  }
+
+  .tech-category {
+    text-align: center;
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .tech-category::before {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .tech-intro p {
+    font-size: 18px;
+  }
+
+  .tech-category {
+    font-size: 18px;
+  }
+}
+
+/* AI Integration Section Styles */
+.ai-integration-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+  height: 1000px;
+}
+
+.ai-integration-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* AI Header */
+.ai-header {
+  margin-bottom: 1rem;
+}
+
+.ai-intro {
+  margin-bottom: 3rem;
+}
+
+.ai-intro p {
+  font-size: 20px;
+  color: var(--inzori-cream);
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 300;
+}
+
+/* AI Services Grid */
+.ai-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.ai-service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ai-service-image {
+  width: 326px;
+  height: 326px;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ai-service-image-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.15;
+}
+
+.ai-service-title {
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.ai-service-description {
+  font-size: 20px;
+  color: var(--inzori-cream);
+  line-height: 1.4;
+  font-weight: 300;
+  max-width: 280px;
+}
+
+/* AI Integration specific title styles */
+.ai-integration-section .section-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design for AI Integration */
+@media (max-width: 991px) {
+  .ai-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .ai-service-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-integration-section {
+    height: auto;
+    min-height: 768px;
+  }
+
+  .ai-integration-content {
+    padding: 2rem 0;
+  }
+
+  .ai-services-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .ai-service-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .ai-service-title {
+    font-size: 32px;
+  }
+
+  .ai-service-description {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ai-service-image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .ai-service-title {
+    font-size: 28px;
+  }
+
+  .ai-service-description {
+    font-size: 18px;
+  }
+
+  .ai-intro p {
+    font-size: 18px;
+  }
+}
+
+/* Why Choose Inzori Section Styles */
+.why-choose-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+  height: 768px;
+}
+
+.why-choose-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.06;
+  z-index: 1;
+}
+
+.why-choose-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title */
+.why-choose-section .section-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Reasons Grid - Circular Layout */
+.reasons-grid {
+  display: grid;
+  grid-template-areas:
+    "partnership remote-first experience"
+    "integration industry-xp innovation";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Individual Reason Items */
+.reason-item {
+  background: transparent;
+  border: 1px solid var(--inzori-orange);
+  border-radius: 30px;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 250px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.reason-item:hover {
+  background: rgba(189, 82, 43, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Grid Positioning */
+.reason-item.remote-first {
+  grid-area: remote-first;
+}
+
+.reason-item.partnership {
+  grid-area: partnership;
+}
+
+.reason-item.experience {
+  grid-area: experience;
+}
+
+.reason-item.industry-xp {
+  grid-area: industry-xp;
+}
+
+.reason-item.integration {
+  grid-area: integration;
+}
+
+.reason-item.innovation {
+  grid-area: innovation;
+}
+
+/* Reason Icons */
+.reason-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  color: var(--inzori-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reason-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Reason Content */
+.reason-title {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--inzori-orange);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.reason-description {
+  font-size: 16px;
+  color: var(--inzori-cream);
+  line-height: 1.4;
+  font-weight: 300;
+  margin: 0;
+  max-width: 200px;
+}
+
+/* Responsive Design for Why Choose Inzori */
+@media (max-width: 991px) {
+  .reasons-grid {
+    grid-template-areas:
+      "remote-first partnership"
+      "experience industry-xp"
+      "integration innovation";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1.5rem;
+    max-width: 600px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .reason-description {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-section {
+    height: auto;
+    min-height: 768px;
+  }
+
+  .why-choose-content {
+    padding: 2rem 0;
+  }
+
+  .reasons-grid {
+    grid-template-areas:
+      "remote-first"
+      "partnership"
+      "experience"
+      "industry-xp"
+      "integration"
+      "innovation";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    gap: 1.5rem;
+    max-width: 400px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .reason-item {
+    min-height: 120px;
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .reason-title {
+    font-size: 20px;
+  }
+
+  .reason-description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .reason-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-choose-section .section-title {
+    font-size: 36px;
+  }
+
+  .reason-item {
+    min-height: 100px;
+    padding: 0.8rem;
+  }
+
+  .reason-title {
+    font-size: 18px;
+  }
+
+  .reason-description {
+    font-size: 13px;
+  }
+
+  .reason-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Trusted by Global Clients Section Styles */
+.trusted-clients-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+  height: 768px;
+}
+
+.trusted-clients-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.trusted-clients-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title */
+.trusted-clients-section .section-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Introductory Paragraph */
+.trusted-intro {
+  margin-bottom: 3rem;
+}
+
+.trusted-intro p {
+  font-size: 20px;
+  color: var(--inzori-cream);
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 300;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Clients List - Two Columns */
+.clients-list {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clients-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.client-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Client Bullet Points */
+.client-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: var(--inzori-orange);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Client Information */
+.client-info {
+  font-size: 16px;
+  color: var(--inzori-cream);
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+/* Responsive Design for Trusted Clients */
+@media (max-width: 991px) {
+  .clients-list {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 600px;
+  }
+
+  .clients-column {
+    text-align: center;
+  }
+
+  .client-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .trusted-clients-section {
+    height: auto;
+    min-height: 768px;
+  }
+
+  .trusted-clients-content {
+    padding: 2rem 0;
+  }
+
+  .trusted-clients-section .section-title {
+    font-size: 36px;
+  }
+
+  .trusted-intro p {
+    font-size: 18px;
+  }
+
+  .client-info {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .trusted-clients-section .section-title {
+    font-size: 32px;
+  }
+
+  .trusted-intro p {
+    font-size: 16px;
+  }
+
+  .client-info {
+    font-size: 14px;
+  }
+
+  .clients-list {
+    gap: 1.5rem;
+  }
+}
+
+/* Client Testimonials Section Styles */
+.client-testimonials-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+  height: 768px;
+}
+
+.testimonials-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title */
+.client-testimonials-section .section-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--inzori-orange);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Testimonials Grid - 4 in a row */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Testimonial Icon */
+.testimonial-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--inzori-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.testimonial-icon svg {
+  width: 60px;
+  height: 60px;
+}
+
+/* Client Information */
+.client-name {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--inzori-orange);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.client-title {
+  font-size: 18px;
+  color: var(--inzori-cream);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+/* Testimonial Quote */
+.testimonial-quote {
+  font-size: 16px;
+  color: var(--inzori-cream);
+  line-height: 1.5;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+  text-align: left;
+  position: relative;
+}
+
+.testimonial-quote::before {
+  content: '"';
+  font-size: 24px;
+  color: var(--inzori-orange);
+  position: absolute;
+  top: -10px;
+  left: -15px;
+}
+
+.testimonial-quote::after {
+  content: '"';
+  font-size: 24px;
+  color: var(--inzori-orange);
+  position: absolute;
+  bottom: -10px;
+  right: -15px;
+}
+
+/* Responsive Design for Client Testimonials */
+@media (max-width: 1200px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 800px;
+  }
+
+  .testimonial-item {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-testimonials-section {
+    height: auto;
+    min-height: 768px;
+  }
+
+  .testimonials-content {
+    padding: 2rem 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 500px;
+  }
+
+  .client-testimonials-section .section-title {
+    font-size: 36px;
+  }
+
+  .client-name {
+    font-size: 24px;
+  }
+
+  .client-title {
+    font-size: 18px;
+  }
+
+  .testimonial-quote {
+    font-size: 15px;
+  }
+
+  .testimonial-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .testimonial-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .client-testimonials-section .section-title {
+    font-size: 32px;
+  }
+
+  .client-name {
+    font-size: 22px;
+  }
+
+  .client-title {
+    font-size: 16px;
+  }
+
+  .testimonial-quote {
+    font-size: 14px;
+  }
+
+  .testimonial-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .testimonial-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Contact Us Section Styles */
+.contact-us-section {
+  background-color: var(--inzori-dark);
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+.contact-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+/* Left Column - Contact Information */
+.contact-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 4rem 3rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Main Title */
+.contact-main-title {
+  font-size: 64px;
+  font-weight: 400;
+  color: var(--inzori-orange);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Subtitle */
+.contact-subtitle {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--inzori-cream);
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Contact Logo */
+.contact-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--inzori-orange);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.logo-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--inzori-dark);
+  line-height: 1;
+}
+
+/* Email Information */
+.email-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.email-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--inzori-cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.email-address {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--inzori-cream);
+  text-decoration: underline;
+  text-decoration-color: var(--inzori-cream);
+  text-underline-offset: 2px;
+}
+
+.email-address:hover {
+  color: var(--inzori-orange);
+  text-decoration-color: var(--inzori-orange);
+}
+
+/* Right Column - Empty for background image */
+.contact-right {
+  flex: 1;
+  background-color: transparent;
+}
+
+/* Responsive Design for Contact Us */
+@media (max-width: 991px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-left {
+    padding: 3rem 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-right {
+    display: none;
+  }
+
+  .contact-main-title {
+    font-size: 48px;
+  }
+
+  .logo-text {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-us-section {
+    height: auto;
+    min-height: 768px;
+  }
+
+  .contact-left {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-main-title {
+    font-size: 40px;
+  }
+
+  .contact-subtitle {
+    font-size: 20px;
+  }
+
+  .logo-text {
+    font-size: 32px;
+  }
+
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-main-title {
+    font-size: 36px;
+  }
+
+  .contact-subtitle {
+    font-size: 18px;
+  }
+
+  .logo-text {
+    font-size: 28px;
+  }
+
+  .logo-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .email-label,
+  .email-address {
+    font-size: 14px;
+  }
+}
