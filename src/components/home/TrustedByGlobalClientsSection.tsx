@@ -1,6 +1,6 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import trustedImage from "../assets/images/trusted_image.jpg";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import trustedImage from "../../assets/images/home/trusted_image.jpg";
 
 const TrustedByGlobalClientsSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

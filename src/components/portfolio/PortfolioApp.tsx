@@ -1,11 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/InzoriStyles.css";
-import "../styles/PortfolioStyles.css";
-import "../styles/NavbarStyles.css";
-import Navbar from "./Navbar";
+import "../../styles/main.css";
+import Navbar from "../common/Navbar";
 import PortfolioPage from "./PortfolioPage";
-import FooterSection from "./FooterSection";
+import FooterSection from "../common/FooterSection";
 
 const PortfolioApp: React.FC = () => {
   return (

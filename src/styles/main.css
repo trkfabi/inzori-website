@@ -1,0 +1,10 @@
+/* Import global styles */
+@import "./global/variables.css";
+@import "./global/base.css";
+@import "./global/InzoriStyles.css";
+
+/* Import component styles */
+@import "./components/NavbarStyles.css";
+
+/* Import page styles */
+@import "./pages/PortfolioStyles.css";

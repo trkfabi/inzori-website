@@ -1,6 +1,6 @@
 import React from "react";
-import aboutUsImage from "../assets/images/aboutus_image.jpg";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import aboutUsImage from "../../assets/images/home/aboutus_image.jpg";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 
 const AboutUsSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

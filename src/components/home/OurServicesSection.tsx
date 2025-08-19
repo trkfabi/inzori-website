@@ -1,8 +1,8 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import fullstackImage from "../assets/images/services_fullstack_image.jpg";
-import aiImage from "../assets/images/services_ai_image.jpg";
-import fintechImage from "../assets/images/services_fintech_image.jpg";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import fullstackImage from "../../assets/images/home/services_fullstack_image.jpg";
+import aiImage from "../../assets/images/home/services_ai_image.jpg";
+import fintechImage from "../../assets/images/home/services_fintech_image.jpg";
 
 const OurServicesSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

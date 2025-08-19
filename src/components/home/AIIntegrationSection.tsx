@@ -1,8 +1,8 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import aiSmartImage from "../assets/images/ai_smart_image.jpg";
-import aiTestImage from "../assets/images/ai_test_image.jpg";
-import aiProcessImage from "../assets/images/ai_process_image.jpg";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import aiSmartImage from "../../assets/images/home/ai_smart_image.jpg";
+import aiTestImage from "../../assets/images/home/ai_test_image.jpg";
+import aiProcessImage from "../../assets/images/home/ai_process_image.jpg";
 
 const AIIntegrationSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

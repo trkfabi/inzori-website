@@ -1,5 +1,5 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 
 const ClientTestimonialsSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

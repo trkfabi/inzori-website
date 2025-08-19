@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import taglineImage from "../assets/images/tagline_image.jpg";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import taglineImage from "../../assets/images/home/tagline_image.jpg";
 
 const TaglinePortfolioSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

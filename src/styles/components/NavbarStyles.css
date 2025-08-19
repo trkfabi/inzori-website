@@ -9,13 +9,13 @@
   backdrop-filter: blur(10px);
   /* border-bottom: 1px solid rgba(189, 177, 148, 0.1); */
   transition: all 0.3s ease;
-  height: 40px; /* Half the original height */
+  height: 50px; /* Half the original height */
 }
 
 .navbar-container {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   padding: 0.5rem 2rem; /* Reduced padding to match new height */
   width: 100%;
   height: 100%;

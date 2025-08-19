@@ -1,6 +1,6 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import techImage from "../assets/images/tech_image.jpg";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import techImage from "../../assets/images/home/tech_image.jpg";
 
 const TechnologyStackSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

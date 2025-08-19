@@ -1,6 +1,6 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import whyChooseImage from "../assets/images/why_choose_image.jpg";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import whyChooseImage from "../../assets/images/home/why_choose_image.jpg";
 
 const WhyChooseInzoriSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

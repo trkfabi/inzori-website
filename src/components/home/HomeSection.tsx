@@ -1,7 +1,7 @@
 import React from "react";
-import logoInzori from "../assets/images/logo_inzori.png";
-import homeImage from "../assets/images/home_image.jpg";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import logoInzori from "../../assets/images/logo_inzori.png";
+import homeImage from "../../assets/images/home/home_image.jpg";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 
 const HomeSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

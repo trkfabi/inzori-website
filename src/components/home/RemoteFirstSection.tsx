@@ -1,6 +1,6 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import remoteImage from "../assets/images/remote_image.png";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import remoteImage from "../../assets/images/home/remote_image.png";
 
 const RemoteFirstSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

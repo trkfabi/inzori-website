@@ -1,0 +1,11 @@
+export { default as HomeSection } from "./HomeSection";
+export { default as AboutUsSection } from "./AboutUsSection";
+export { default as RemoteFirstSection } from "./RemoteFirstSection";
+export { default as OurServicesSection } from "./OurServicesSection";
+export { default as TaglinePortfolioSection } from "./TaglinePortfolioSection";
+export { default as TechnologyStackSection } from "./TechnologyStackSection";
+export { default as AIIntegrationSection } from "./AIIntegrationSection";
+export { default as WhyChooseInzoriSection } from "./WhyChooseInzoriSection";
+export { default as TrustedByGlobalClientsSection } from "./TrustedByGlobalClientsSection";
+export { default as ClientTestimonialsSection } from "./ClientTestimonialsSection";
+export { default as ContactUsSection } from "./ContactUsSection";

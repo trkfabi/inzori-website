@@ -1,0 +1,33 @@
+:root {
+  /* Colors */
+  --inzori-orange: #bd522b;
+  --inzori-cream: #bdb194;
+  --inzori-dark: #000000;
+  --inzori-white: #ffffff;
+
+  /* Typography */
+  --font-family-primary: "Garet", sans-serif;
+  --font-size-base: 16px;
+  --font-size-title: 36px;
+  --font-size-large: 54px;
+  --font-weight-light: 100;
+  --font-weight-normal: 300;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-normal: 0.8s ease-out;
+
+  /* Z-index */
+  --z-index-background: 1;
+  --z-index-content: 10;
+  --z-index-overlay: 100;
+  --z-index-navbar: 1000;
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import logoInzori from "../assets/images/logo_inzori.png";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import logoInzori from "../../assets/images/logo_inzori.png";
 
 const FooterSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();

@@ -1,7 +1,7 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import contactImage from "../assets/images/contact_image.jpg";
-import logoInzori from "../assets/images/logo_inzori.png";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import contactImage from "../../assets/images/home/contact_image.jpg";
+import logoInzori from "../../assets/images/logo_inzori.png";
 
 const ContactUsSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
