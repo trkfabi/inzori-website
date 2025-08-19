@@ -9,6 +9,7 @@ const ContactUsSection: React.FC = () => {
   return (
     <section
       ref={elementRef}
+      id="contact"
       className={`section contact-us-section fade-in-section ${
         isVisible ? "visible" : ""
       }`}

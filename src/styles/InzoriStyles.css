@@ -2310,3 +2310,8 @@ h6 {
     gap: 1rem;
   }
 }
+
+/* App Container */
+.App {
+  padding-top: 40px; /* Space for fixed navbar (reduced height) */
+}

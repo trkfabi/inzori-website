@@ -1,9 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import taglineImage from "../assets/images/tagline_image.jpg";
 
 const TaglinePortfolioSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
+  const navigate = useNavigate();
+
+  const handlePortfolioClick = () => {
+    // Navigate to portfolio page using React Router
+    navigate("/portfolio");
+  };
 
   return (
     <section
@@ -15,7 +22,7 @@ const TaglinePortfolioSection: React.FC = () => {
       {/* Background Image */}
       <img
         src={taglineImage}
-        alt="Tagline Background"
+        alt="Tagline Portfolio Background"
         className="tagline-background-image"
       />
 
@@ -33,9 +40,9 @@ const TaglinePortfolioSection: React.FC = () => {
           </div>
 
           {/* Portfolio Button */}
-          <div className="portfolio-button-container">
-            <button className="portfolio-button">PORTFOLIO</button>
-          </div>
+          <button className="portfolio-button" onClick={handlePortfolioClick}>
+            PORTFOLIO
+          </button>
         </div>
       </div>
     </section>
