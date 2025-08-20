@@ -38,6 +38,24 @@ const Navbar: React.FC = () => {
           });
         }
       }
+    } else if (path === "/") {
+      // Handle Home navigation
+      if (location.pathname === "/") {
+        // If already on home page, scroll to top
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      } else {
+        // If on another page, navigate to home and scroll to top
+        navigate("/");
+        setTimeout(() => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }, 100);
+      }
     } else {
       navigate(path);
     }

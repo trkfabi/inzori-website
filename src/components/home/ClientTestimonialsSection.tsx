@@ -31,8 +31,12 @@ const ClientTestimonialsSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <h3 className="client-name">{translations.testimonials.nickEvans.name}</h3>
-              <p className="client-title">{translations.testimonials.nickEvans.title}</p>
+              <h3 className="client-name">
+                {translations.testimonials.nickEvans.name}
+              </h3>
+              <p className="client-title">
+                {translations.testimonials.nickEvans.title}
+              </p>
               <blockquote className="testimonial-quote">
                 {translations.testimonials.nickEvans.quote}
               </blockquote>
@@ -49,8 +53,12 @@ const ClientTestimonialsSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <h3 className="client-name">{translations.testimonials.ericEngberson.name}</h3>
-              <p className="client-title">{translations.testimonials.ericEngberson.title}</p>
+              <h3 className="client-name">
+                {translations.testimonials.ericEngberson.name}
+              </h3>
+              <p className="client-title">
+                {translations.testimonials.ericEngberson.title}
+              </p>
               <blockquote className="testimonial-quote">
                 {translations.testimonials.ericEngberson.quote}
               </blockquote>

@@ -33,7 +33,9 @@ const RemoteFirstSection: React.FC = () => {
 
           {/* Key Points Section */}
           <div className="key-points-section">
-            <h3 className="key-points-heading">{translations.remoteFirst.keyPoints.title}</h3>
+            <h3 className="key-points-heading">
+              {translations.remoteFirst.keyPoints.title}
+            </h3>
             <ul className="key-points-list">
               {translations.remoteFirst.keyPoints.points.map((point, index) => (
                 <li key={index}>{point}</li>

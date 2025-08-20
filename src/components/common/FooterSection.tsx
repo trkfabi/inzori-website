@@ -1,6 +1,7 @@
 import React from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { Link } from "react-router-dom";
 import logoInzori from "../../assets/images/logo_inzori.png";
 
 const FooterSection: React.FC = () => {
@@ -88,9 +89,9 @@ const FooterSection: React.FC = () => {
                 © 2024 Inzori. {translations.footer.rights}
               </p>
               <div className="footer-legal">
-                <span>Privacy Policy</span>
-                <span>Terms of Service</span>
-                <span>Cookie Policy</span>
+                <Link to="/privacy-policy">Privacy Policy</Link>
+                <Link to="/terms-of-service">Terms of Service</Link>
+                <Link to="/cookie-policy">Cookie Policy</Link>
               </div>
             </div>
           </div>

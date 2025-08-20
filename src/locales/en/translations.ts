@@ -200,7 +200,7 @@ export const enTranslations = {
     backToHome: "BACK TO HOME",
     projects: {
       cEye: {
-        title: "C Eye",
+        title: "C-Eye",
         description:
           "An innovative mobile application for comprehensive eye health monitoring, tracking, personalized recommendations, and connecting with eye care professionals.",
       },
@@ -302,5 +302,224 @@ export const enTranslations = {
     aiIntegration:
       "At Inzori, we integrate AI into our daily workflows to accelerate development, improve quality, and optimize processes. By combining our technical expertise with the latest AI tools, we deliver smarter solutions that help our clients innovate faster and operate more efficiently.",
     remoteFirst: "Remote-first DNA with global team collaboration.",
+  },
+
+  // Legal Pages
+  legal: {
+    privacyPolicy: {
+      title: "Privacy Policy",
+      lastUpdated: "Last updated:",
+      sections: {
+        informationCollection: {
+          title: "1. Information We Collect",
+          description:
+            "We collect information you provide directly to us, such as when you contact us, subscribe to our newsletter, or request information about our services. This may include:",
+          items: [
+            "Name and contact information",
+            "Company information",
+            "Communication preferences",
+            "Any other information you choose to provide",
+          ],
+        },
+        informationUse: {
+          title: "2. How We Use Your Information",
+          description: "We use the information we collect to:",
+          items: [
+            "Provide, maintain, and improve our services",
+            "Communicate with you about our services",
+            "Send you technical notices and support messages",
+            "Respond to your comments and questions",
+            "Develop new products and services",
+          ],
+        },
+        informationSharing: {
+          title: "3. Information Sharing",
+          description:
+            "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy. We may share your information with:",
+          items: [
+            "Service providers who assist in our operations",
+            "Legal authorities when required by law",
+            "Business partners with your explicit consent",
+          ],
+        },
+        dataSecurity: {
+          title: "4. Data Security",
+          description:
+            "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
+        },
+        yourRights: {
+          title: "5. Your Rights",
+          description: "You have the right to:",
+          items: [
+            "Access your personal information",
+            "Correct inaccurate information",
+            "Request deletion of your information",
+            "Object to processing of your information",
+            "Withdraw consent at any time",
+          ],
+        },
+        cookies: {
+          title: "6. Cookies and Tracking",
+          description:
+            "We use cookies and similar technologies to enhance your experience on our website. You can control cookie settings through your browser preferences.",
+        },
+        changes: {
+          title: "7. Changes to This Policy",
+          description:
+            "We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the 'Last updated' date.",
+        },
+        contact: {
+          title: "8. Contact Us",
+          description:
+            "If you have any questions about this privacy policy, please contact us at:",
+          email: "Email: privacy@inzori.com",
+          address: "",
+        },
+      },
+    },
+    termsOfService: {
+      title: "Terms of Service",
+      lastUpdated: "Last updated:",
+      sections: {
+        acceptance: {
+          title: "1. Acceptance of Terms",
+          description:
+            "By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.",
+        },
+        useLicense: {
+          title: "2. Use License",
+          description:
+            "Permission is granted to temporarily download one copy of the materials (information or software) on Inzori's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:",
+          items: [
+            "Modify or copy the materials",
+            "Use the materials for any commercial purpose or for any public display",
+            "Attempt to reverse engineer any software contained on the website",
+            "Remove any copyright or other proprietary notations from the materials",
+            "Transfer the materials to another person or 'mirror' the materials on any other server",
+          ],
+        },
+        disclaimer: {
+          title: "3. Disclaimer",
+          description:
+            "The materials on Inzori's website are provided on an 'as is' basis. Inzori makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.",
+        },
+        limitations: {
+          title: "4. Limitations",
+          description:
+            "In no event shall Inzori or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Inzori's website, even if Inzori or a Inzori authorized representative has been notified orally or in writing of the possibility of such damage.",
+        },
+        accuracy: {
+          title: "5. Accuracy of Materials",
+          description:
+            "The materials appearing on Inzori's website could include technical, typographical, or photographic errors. Inzori does not warrant that any of the materials on its website are accurate, complete, or current. Inzori may make changes to the materials contained on its website at any time without notice.",
+        },
+        links: {
+          title: "6. Links",
+          description:
+            "Inzori has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Inzori of the site. Use of any such linked website is at the user's own risk.",
+        },
+        modifications: {
+          title: "7. Modifications",
+          description:
+            "Inzori may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these Terms of Service.",
+        },
+        governingLaw: {
+          title: "8. Governing Law",
+          description:
+            "These terms and conditions are governed by and construed in accordance with the laws and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location.",
+        },
+        contact: {
+          title: "9. Contact Information",
+          description:
+            "If you have any questions about these Terms of Service, please contact us at:",
+          email: "Email: legal@inzori.com",
+          address: "",
+        },
+      },
+    },
+    cookiePolicy: {
+      title: "Cookie Policy",
+      lastUpdated: "Last updated:",
+      sections: {
+        whatAreCookies: {
+          title: "1. What Are Cookies",
+          description:
+            "Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.",
+        },
+        howWeUse: {
+          title: "2. How We Use Cookies",
+          description: "We use cookies for several purposes:",
+          items: [
+            "Essential Cookies: These cookies are necessary for the website to function properly",
+            "Analytics Cookies: To understand how visitors interact with our website",
+            "Functional Cookies: To remember your preferences and settings",
+            "Marketing Cookies: To provide relevant content and advertisements",
+          ],
+        },
+        types: {
+          title: "3. Types of Cookies We Use",
+          session: {
+            title: "Session Cookies",
+            description:
+              "These cookies are temporary and are deleted when you close your browser. They help maintain your session while you navigate through the website.",
+          },
+          persistent: {
+            title: "Persistent Cookies",
+            description:
+              "These cookies remain on your device for a set period or until you delete them. They help us remember your preferences for future visits.",
+          },
+          thirdParty: {
+            title: "Third-Party Cookies",
+            description:
+              "These cookies are set by third-party services we use, such as analytics providers or social media platforms.",
+          },
+        },
+        specificCookies: {
+          title: "4. Specific Cookies We Use",
+          googleAnalytics: {
+            title: "Google Analytics",
+            description:
+              "We use Google Analytics to understand how visitors use our website. This helps us improve our services and user experience.",
+          },
+          essential: {
+            title: "Essential Website Cookies",
+            description:
+              "These cookies are necessary for basic website functionality, including navigation and access to secure areas.",
+          },
+        },
+        managingPreferences: {
+          title: "5. Managing Your Cookie Preferences",
+          description: "You can control and manage cookies in several ways:",
+          items: [
+            "Browser Settings: Most browsers allow you to refuse cookies or delete them",
+            "Cookie Consent: We provide options to accept or decline non-essential cookies",
+            "Third-Party Opt-Out: You can opt out of specific third-party cookies",
+          ],
+          note: "Note: Disabling certain cookies may affect the functionality of our website.",
+        },
+        duration: {
+          title: "6. Cookie Duration",
+          description: "Cookies on our website have different lifespans:",
+          items: [
+            "Session Cookies: Deleted when you close your browser",
+            "Persistent Cookies: Remain for up to 2 years",
+            "Analytics Cookies: Typically expire after 2 years",
+          ],
+        },
+        updates: {
+          title: "7. Updates to This Policy",
+          description:
+            "We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the new policy on our website.",
+        },
+        contact: {
+          title: "8. Contact Us",
+          description:
+            "If you have any questions about our use of cookies or this Cookie Policy, please contact us at:",
+          email: "Email: privacy@inzori.com",
+          address: "",
+        },
+      },
+    },
+    backToHome: "← Back to Home",
   },
 };

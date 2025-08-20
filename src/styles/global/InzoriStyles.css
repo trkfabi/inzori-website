@@ -334,9 +334,17 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  .home-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
   .home-content-left {
     padding: 2rem 1.5rem;
-    min-height: 350px;
+    height: auto;
+    min-height: auto;
+    justify-content: center;
   }
 
   .logo-container {
@@ -357,6 +365,9 @@ h6 {
   .hero-text {
     font-size: 36px;
     text-align: center;
+    line-height: 32px;
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   .home-image-container {
@@ -388,6 +399,8 @@ h6 {
 
   .hero-text {
     font-size: 28px;
+    line-height: 25px;
+    max-width: 280px;
   }
 }
 
@@ -522,10 +535,13 @@ h6 {
   .timeline-diagram {
     flex-direction: column;
     gap: 1.5rem;
+    margin-top: 2rem;
   }
 
   .timeline-arrow {
     transform: rotate(90deg);
+    align-self: center;
+    margin-top: 0;
   }
 
   .about-text p {
@@ -666,19 +682,20 @@ h6 {
   }
 
   .key-points-section {
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
   }
 
   .key-points-list li {
-    text-align: center;
-    padding-left: 0;
-    padding-top: 2rem;
+    text-align: left;
+    padding-left: 2rem;
+    padding-top: 0;
   }
 
   .key-points-list li::before {
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
+    left: 0;
+    top: 0.5rem;
+    transform: none;
   }
 }
 
@@ -763,7 +780,7 @@ h6 {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  opacity: 0.15;
+  opacity: 0.5;
 }
 
 .service-title {
@@ -1096,19 +1113,18 @@ h6 {
   }
 
   .tech-categories {
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
   }
 
   .tech-category {
-    text-align: center;
-    padding-left: 0;
-    padding-top: 2rem;
+    text-align: left;
+    padding-left: 2rem;
   }
 
   .tech-category::before {
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
+    left: 0;
+    top: 0.5rem;
   }
 }
 
@@ -1189,7 +1205,7 @@ h6 {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  opacity: 0.15;
+  opacity: 0.5;
 }
 
 .ai-service-title {
@@ -1612,11 +1628,12 @@ h6 {
   }
 
   .clients-column {
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
   }
 
   .client-item {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
@@ -1994,6 +2011,10 @@ h6 {
     align-items: center;
   }
 
+  .contact-logo {
+    justify-content: center;
+  }
+
   .contact-right {
     display: none;
   }
@@ -2175,6 +2196,22 @@ h6 {
 
 .footer-links li:hover {
   color: var(--inzori-orange);
+}
+
+/* Footer Legal Links */
+.footer-legal a {
+  font-size: 14px;
+  color: var(--inzori-cream);
+  font-weight: 300;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-legal a:hover {
+  color: var(--inzori-orange);
+  opacity: 1;
 }
 
 /* Footer Contact */
