@@ -290,7 +290,15 @@ const PortfolioProjectSection: React.FC<PortfolioProjectSectionProps> = ({
         <div className="project-content">
           <h2 className="project-title">{title}</h2>
           <p className="project-description">{description}</p>
-          <div className={`project-images ${layout}`}>
+          <div
+            className={`project-images ${layout} ${
+              imageCount === 2
+                ? "two-images"
+                : imageCount > 2
+                ? "multiple-images"
+                : ""
+            }`}
+          >
             {images
               ? images.map((imageUrl, index) => (
                   <div key={index} className={`project-image ${imageClass}`}>

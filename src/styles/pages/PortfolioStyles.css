@@ -403,11 +403,41 @@
     padding-bottom: 1rem; /* Space for scroll bar */
   }
 
+  /* Special handling for 2 images - vertical stack on mobile */
+  .project-images.two-images {
+    flex-direction: column;
+    overflow-x: visible;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .project-images.two-images .project-image {
+    max-width: 80%;
+    margin-bottom: 1rem;
+    min-width: auto;
+  }
+
+  .project-images.two-images .project-image:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Ensure multiple images stay in one line with scroll */
+  .project-images.multiple-images {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .project-images.multiple-images .project-image {
+    flex-shrink: 0;
+  }
+
   .project-image {
-    min-width: 250px; /* Prevent images from becoming too small */
-    max-width: 300px;
+    min-width: 180px; /* Smaller min-width for better fit */
+    max-width: 250px; /* Reduced max-width */
     height: auto;
     flex-shrink: 0; /* Prevent images from shrinking */
+    transition: transform 0.2s ease;
   }
 
   .project-image img {
@@ -415,27 +445,47 @@
   }
 
   .project-images.staggered {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 1.5rem;
+    overflow-x: auto;
   }
 
   .project-images.four-images {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 0.5rem;
+    overflow-x: auto;
   }
 
   .project-images.five-images {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 0.5rem;
+    overflow-x: auto;
+  }
+
+  .project-images.four-images .project-image,
+  .project-images.five-images .project-image,
+  .project-images.staggered .project-image {
+    min-width: 160px; /* Even smaller for multiple images */
+    max-width: 200px;
   }
 
   .project-images.four-images .project-image img,
   .project-images.staggered .project-image img {
-    max-height: 250px;
+    max-height: 280px; /* Increased height to show more of the image */
+    width: 100%;
+    object-fit: contain; /* Ensure full image is visible */
   }
 
   .project-images.five-images .project-image img {
-    max-height: 250px;
+    max-height: 280px; /* Increased height to show more of the image */
+    width: 100%;
+    object-fit: contain; /* Ensure full image is visible */
   }
 
   .back-to-home-btn {
@@ -460,14 +510,29 @@
   }
 
   .project-image {
-    min-width: 200px; /* Smaller minimum width for very small screens */
-    max-width: 250px;
+    min-width: 140px; /* Much smaller minimum width for very small screens */
+    max-width: 180px;
     height: auto;
     flex-shrink: 0; /* Prevent images from shrinking */
   }
 
   .project-image img {
+    max-height: 220px; /* Slightly increased to show more of the image */
+  }
+
+  /* Specific adjustments for multiple images on very small screens */
+  .project-images.four-images .project-image,
+  .project-images.five-images .project-image,
+  .project-images.staggered .project-image {
+    min-width: 120px; /* Very small for multiple images */
+    max-width: 150px;
+  }
+
+  .project-images.four-images .project-image img,
+  .project-images.five-images .project-image img,
+  .project-images.staggered .project-image img {
     max-height: 200px;
+    object-fit: contain;
   }
 
   .image-placeholder {
