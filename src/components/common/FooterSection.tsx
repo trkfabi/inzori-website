@@ -67,15 +67,28 @@ const FooterSection: React.FC = () => {
             <div className="footer-column">
               <h4 className="footer-subtitle">Contact</h4>
               <div className="footer-contact">
-                <p>Email: contact@inzori.com</p>
+                <p>
+                  Email:{" "}
+                  <a href="mailto:contact@inzori.com">contact@inzori.com</a>
+                </p>
                 <p>Remote-First Company</p>
               </div>
               <div className="footer-social">
                 <h5>Follow Us</h5>
                 <div className="social-links">
-                  <span className="social-link">LinkedIn</span>
-                  <span className="social-link">GitHub</span>
-                  <span className="social-link">Twitter</span>
+                  <span className="social-link">
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/company/inzori"
+                    >
+                      LinkedIn
+                    </a>
+                  </span>
+                  <span className="social-link">
+                    <a target="_blank" href="https://github.com/trkfabi">
+                      GitHub
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -86,7 +99,7 @@ const FooterSection: React.FC = () => {
             <div className="footer-divider"></div>
             <div className="footer-bottom-content">
               <p className="copyright">
-                © 2024 Inzori. {translations.footer.rights}
+                © 2025 Inzori. {translations.footer.rights}
               </p>
               <div className="footer-legal">
                 <Link to="/privacy-policy">Privacy Policy</Link>
